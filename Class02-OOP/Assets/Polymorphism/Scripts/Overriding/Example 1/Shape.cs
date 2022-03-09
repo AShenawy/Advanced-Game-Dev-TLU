@@ -8,8 +8,10 @@ public class Shape : MonoBehaviour
 
     private SpriteRenderer renderer;
 
-    void Start()
+    // We make the Start method public and virtual so that it's possible to override it in child classes
+    public virtual void Start()
     {
+        print("Start from parent");
         renderer = GetComponent<SpriteRenderer>();
         //print("My shape is: " + gameObject.name);
         GetArea();

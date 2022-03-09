@@ -6,6 +6,12 @@ public class Square : Shape
 {
     public float sideLength;
 
+    // Since we want to keep using Start in parent class, we "override" the Start method
+    public override void Start()
+    {
+        print("Start from Child");
+        base.Start();
+    }
 
     // By overriding a parent's virtual method we implement something new in the child,
     // with the choice to still execute the original method, via the 'base' keyword
