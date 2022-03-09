@@ -136,8 +136,7 @@ GameObject:
   - component: {fileID: 5577228}
   - component: {fileID: 5577227}
   - component: {fileID: 5577231}
-  - component: {fileID: 5577232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,18 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4ad429fa1990b48aaa09b5e8a818bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5577232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191039687
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,8 +243,7 @@ GameObject:
   - component: {fileID: 191039690}
   - component: {fileID: 191039689}
   - component: {fileID: 191039688}
-  - component: {fileID: 191039692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,18 +326,6 @@ Transform:
   m_Father: {fileID: 437405025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &191039692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191039687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &437405024
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +506,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -661,6 +635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
+  interactMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &1201289338
 Transform:
   m_ObjectHideFlags: 0
@@ -669,7 +646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201289336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.569656, y: 0.027489662, z: -4.202613}
+  m_LocalPosition: {x: 4.569656, y: 5.07, z: -4.202613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -688,8 +665,7 @@ GameObject:
   - component: {fileID: 1272671745}
   - component: {fileID: 1272671744}
   - component: {fileID: 1272671748}
-  - component: {fileID: 1272671749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,18 +758,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e4ad429fa1990b48aaa09b5e8a818bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1272671749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272671743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1320212841
@@ -904,8 +868,7 @@ GameObject:
   - component: {fileID: 1582343483}
   - component: {fileID: 1582343482}
   - component: {fileID: 1582343481}
-  - component: {fileID: 1582343485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,18 +951,6 @@ Transform:
   m_Father: {fileID: 437405025}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1582343485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582343480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1584137946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,8 +964,7 @@ GameObject:
   - component: {fileID: 1584137948}
   - component: {fileID: 1584137947}
   - component: {fileID: 1584137951}
-  - component: {fileID: 1584137952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,18 +1059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4ad429fa1990b48aaa09b5e8a818bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1584137952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584137946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2133325023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,8 +1072,7 @@ GameObject:
   - component: {fileID: 2133325025}
   - component: {fileID: 2133325024}
   - component: {fileID: 2133325028}
-  - component: {fileID: 2133325029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,17 +1165,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e4ad429fa1990b48aaa09b5e8a818bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2133325029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133325023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074ab09a37e9c0428636465df849ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
