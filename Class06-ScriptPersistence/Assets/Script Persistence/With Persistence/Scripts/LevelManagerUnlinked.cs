@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This script doesn't inherit from MonoBehaviour, has static members (variables & functions),
+// and can be accessed from any script in any scene
+// Note: It also lost its ability to use Awake, Start, Update, etc that come from MonoBehaviour
 public class LevelManagerUnlinked
 {
     public static string previousLevel;
