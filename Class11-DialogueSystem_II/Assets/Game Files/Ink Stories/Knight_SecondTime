@@ -1,0 +1,18 @@
+
+== visit_friendly ==
+Hello!
+It's good to see you're alive and well.
++ [Leave] -> END
+
+== visit_neutral ==
+I see you're back.
+Did you want to speak with me?
++ [Do you miss being a warrior?] -> asked_if_missed
++ [Ignore him]
+    Good luck with your travels.
+        + + [Leave] -> END
+
+== visit_unfriendly ==
+Oi!
+I told you not to show your face around here, you coward.
++ [Leave] -> END
