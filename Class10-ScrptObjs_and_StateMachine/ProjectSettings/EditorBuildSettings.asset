@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scriptable Objects/Scenes/ScriptableObjects.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scriptable Test/lvl1.unity
+    guid: e57c03dc3c7f6ac4baea744b36e785d2
+  - enabled: 1
+    path: Assets/Scriptable Test/lvl2.unity
+    guid: 3b13cf16010d30846b63324d05477eec
   m_configObjects: {}

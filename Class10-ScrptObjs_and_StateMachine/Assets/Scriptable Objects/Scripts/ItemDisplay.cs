@@ -15,4 +15,10 @@ public class ItemDisplay : MonoBehaviour
         itemText.text = itemData.itemName;
         itemImage.sprite = itemData.itemIcon;
     }
+
+    public void ModifyName(string newName)
+    {
+        itemData.itemName = newName;
+        itemText.text = newName;
+    }
 }
