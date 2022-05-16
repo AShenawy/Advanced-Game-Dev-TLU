@@ -46,6 +46,7 @@ namespace GameSaveGeneral
         public void OnLoadButtonClicked()
         {
             GameSaveManager.instance.LoadGameData();
+
             if (GameSaveManager.instance.isDataLoaded)
             {
                 SetPlayerPosition();

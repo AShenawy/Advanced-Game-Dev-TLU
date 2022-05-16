@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // Z is forward in 3D space
         Vector3 moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
         if (moveInput.x != 0f || moveInput.z != 0f)
