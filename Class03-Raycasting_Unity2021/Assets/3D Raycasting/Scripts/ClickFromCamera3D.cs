@@ -30,7 +30,9 @@ public class ClickFromCamera3D : MonoBehaviour
 
         // Physics.Raycast returns a bool (true/false) whether it hit a collider or not
         // Interaction mask allows us to filter what objects the ray should register
-        if (Physics.Raycast(clickRay, out hit, 100f, interactMask))
+        bool isHit = Physics.Raycast(clickRay, out hit, 100f, interactMask);
+
+        if (isHit)
         {
             print(hit.transform.name);
 

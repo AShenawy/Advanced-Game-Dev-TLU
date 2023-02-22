@@ -34,10 +34,10 @@ public class ClickFromCamera2D : MonoBehaviour
         {
             print("Clicked on " + hit2d.transform.name);
 
-            // Do other logic with the object clicked on
+            // See if the hit object is a goblin by looking for the GoblinScript on it
             GoblinScript goblin = hit2d.transform.GetComponent<GoblinScript>();
 
-
+            // If we did get a GoblinScript, then we can call the functions in it
             if (goblin != null)
             {
                 goblin.Shout();
