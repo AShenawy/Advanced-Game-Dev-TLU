@@ -5,32 +5,26 @@ using UnityEngine.EventSystems; // This namespace is required to use the below i
 
 public class UIGoblin : MonoBehaviour, IPointerClickHandler, IDragHandler, IBeginDragHandler, IEndDragHandler, IDropHandler
 {
-    // The difference between where a pointer is located when dragging and the pivot point of the game object
-    Vector2 pressToPivotDifference;
 
     // OnBeginDrag is called only 1 time when we hold and start dragging the game object
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // The position of the pointer (mouse, tap, etc.) when the drag started
-        Vector2 pressPos = eventData.position;
-
-        pressToPivotDifference = (Vector2)transform.position - pressPos;
+        GameObject draggedObject = eventData.pointerDrag;
+        print("Begin dragging " + draggedObject.name);
     }
 
     // OnDrag is continuosuly called as long as we're dragging the game object
     public void OnDrag(PointerEventData eventData)
     {
         print("Dragging");
-
-        // If dragging, move the game object to where the pointer is, while compensating for the "shift"
-        // between game object's pivot and the pointer's position
-        transform.position = eventData.position + pressToPivotDifference;
+        transform.position += (Vector3)eventData.delta;
     }
 
     // OnEndDrag is called only 1 time when we let go and stop dragging the game object
     public void OnEndDrag(PointerEventData eventData)
     {
-        print("Dragging Ended!");
+        var draggedObject = eventData.pointerDrag;
+        print("End dragging " + draggedObject.name);
     }
 
     // OnDrop is called on this game object when we drop / end dragging on it with a mouse
@@ -40,7 +34,7 @@ public class UIGoblin : MonoBehaviour, IPointerClickHandler, IDragHandler, IBegi
     // More info: https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.IDropHandler.html
     public void OnDrop(PointerEventData eventData)
     {
-        print("Dropped something on me!");
+        print("I've been dropped!");
     }
 
     // OnPointerClick is called when a full click occurs. E.g.: mouse button both pressed and let go while on top of game object
