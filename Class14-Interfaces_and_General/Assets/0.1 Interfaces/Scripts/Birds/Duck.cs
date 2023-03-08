@@ -5,33 +5,26 @@ using UnityEngine;
 
 public class Duck : Bird, IFlyable
 {
-    private List<GameObject> destinations;
-
-    private bool isAtFinalDestination = false;
-
-    public List<GameObject> Destinations { get => destinations; set => destinations = value; }
-
-    public event Action<GameObject> OnArrivedDestination;
+    // Visual Studio automatically throws errors if we choose the auto-implementation option for interfaces
+    public List<GameObject> Destinations 
+    { 
+        get => throw new NotImplementedException();
+        set => throw new NotImplementedException();
+    }
 
     public void FlyTo(List<GameObject> destinations)
     {
-        if (destinations.Count > 0)
-        {
-            print("Duck is flying to " + destinations[0].name);
-
-            // flap wings..
-            // jump...
-
-            OnArrivedDestination?.Invoke(destinations[0]);
-        }
-        else
-        {
-            print("There's no destination");
-        }
+        print("Duck  is flying to " + destinations[0].name);
+        
+        // Duck logic goes here to make it fly
+        // Run
+        // Flap wings
+        // Jump
     }
 
     public bool HasReachedFinalDestination()
     {
-        return isAtFinalDestination;
+        return true;    // Placeholder for the function's return value. Actual logic needs to be implemented
     }
+
 }

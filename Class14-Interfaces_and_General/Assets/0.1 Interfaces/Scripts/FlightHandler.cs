@@ -7,6 +7,7 @@ public class FlightHandler : MonoBehaviour
     public List<GameObject> flyingObjects;
     public List<GameObject> destinationObjects;
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -17,14 +18,20 @@ public class FlightHandler : MonoBehaviour
 
     void MakeAllFly()
     {
+        // Loop through every flying object in the list
         foreach (GameObject obj in flyingObjects)
         {
-            IFlyable flyable = obj.GetComponent<IFlyable>();
+            print("Flying: " + obj.name);
 
-            //if we found a script that inherits from IFlyable, we can use it
-            if (flyable != null)
+            // Get a script component that has IFlyable 
+            IFlyable flyingObject = obj.GetComponent<IFlyable>();
+
+            // if we're able to get the component, call the IFlyable components on it
+            if (flyingObject != null)
             {
-                flyable.FlyTo(destinationObjects);
+                flyingObject.FlyTo(destinationObjects);
+
+                bool flightEnded = flyingObject.HasReachedFinalDestination();
             }
         }
     }
