@@ -125,4 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyValue: 3
+  type: 2
   player: {fileID: 0}
