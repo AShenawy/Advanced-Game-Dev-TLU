@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManagerPersist : MonoBehaviour
+namespace Persisting
 {
-    public static SoundManagerPersist instance;
-    public AudioSource bgmPlayer;
-
-    private void Awake()
+    public class SoundManagerPersist : MonoBehaviour
     {
-        if (instance == null)
-        {
-            instance = this;
+        public static SoundManagerPersist instance;
+        public AudioSource bgmPlayer;
 
-            // Protect entire game object from being destroyed. This will keep ALL components on the game object
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
+        private void Awake()
         {
-            Destroy(gameObject);
-        }
-    }
+            if (instance == null)
+            {
+                instance = this;
 
-    void Start()
-    {
-        bgmPlayer.Play();
+                // Protect entire game object from being destroyed. This will keep ALL components on the game object
+                DontDestroyOnLoad(gameObject);
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        void Start()
+        {
+            bgmPlayer.Play();
+        }
     }
 }

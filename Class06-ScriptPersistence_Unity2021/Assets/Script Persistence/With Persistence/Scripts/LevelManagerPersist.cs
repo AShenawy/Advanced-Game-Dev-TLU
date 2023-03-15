@@ -3,36 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManagerPersist : MonoBehaviour
+namespace Persisting
 {
-    public static LevelManagerPersist instance;
-
-    public string previousLevel;
-    public string currentLevel;
-
-    private void Awake()
+    public class LevelManagerPersist : MonoBehaviour
     {
-        if (instance == null)
+        // Create a static single instance to access this class/script from anywhere
+        public static LevelManagerPersist instance;
+
+        public string previousLevel;
+        public string currentLevel;
+
+        public void Awake()
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
 
-            // Protect entire game object from being destroyed. This will keep ALL components on the game object
-            DontDestroyOnLoad(gameObject);
+                // Protect entire game object from being destroyed. This will keep ALL components on the game object
+                DontDestroyOnLoad(gameObject);
+            }
+            else if (instance != this)
+            {
+                // If there's another game object in the scene with this script on it, remove it from the scene
+                Destroy(gameObject);
+            }
         }
-        else if (instance != this)
+
+        public void LoadLevel(string levelName)
         {
-            Destroy(gameObject);
+            // store current scene name as previous level before loading the new scene
+            previousLevel = SceneManager.GetActiveScene().name;
+
+            SceneManager.LoadScene(levelName);
+
+            // store newly loaded scene name as the current level
+            currentLevel = levelName;
         }
-    }
-
-    public void LoadLevel(string levelName)
-    {
-        // store current scene name as previous level before loading the new scene
-        previousLevel = SceneManager.GetActiveScene().name;
-        
-        SceneManager.LoadScene(levelName);
-
-        // store newly loaded scene name as the current level
-        currentLevel = levelName;
     }
 }

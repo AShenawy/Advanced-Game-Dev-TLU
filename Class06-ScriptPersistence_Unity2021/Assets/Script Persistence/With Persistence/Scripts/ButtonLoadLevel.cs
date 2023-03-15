@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonLoadLevel : MonoBehaviour
+namespace Persisting
 {
-    public void LoadLevel(string levelName)
+    public class ButtonLoadLevel : MonoBehaviour
     {
-        LevelManagerPersist.instance.LoadLevel(levelName);
+        public void LoadLevel(string levelName)
+        {
+            // Call the LoadLevel function through the static instance variable
+            LevelManagerPersist.instance.LoadLevel(levelName);
+        }
     }
 }

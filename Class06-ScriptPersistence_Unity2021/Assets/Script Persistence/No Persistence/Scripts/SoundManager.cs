@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+namespace NonPersisting
 {
-    public AudioSource bgmPlayer;
-
-    void Start()
+    public class SoundManager : MonoBehaviour
     {
-        bgmPlayer.Play();
+        public AudioSource bgmPlayer;
+
+        void Start()
+        {
+            bgmPlayer.Play();
+        }
     }
 }

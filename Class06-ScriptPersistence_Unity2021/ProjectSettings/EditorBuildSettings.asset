@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Script Persistence/No Persistence/Scenes/LevelA_NoPersist.unity
+    path: Assets/Script Persistence/No Persistence/_Scenes/LevelA_NoPersist.unity
     guid: 1bd00d85b2ef45845b91e235706def29
   - enabled: 1
-    path: Assets/Script Persistence/No Persistence/Scenes/LevelB_NoPersist.unity
+    path: Assets/Script Persistence/No Persistence/_Scenes/LevelB_NoPersist.unity
     guid: 74be62e84759e6440b35310259748b04
   - enabled: 1
-    path: Assets/Script Persistence/With Persistence/Scenes/LevelA_WithPersist.unity
+    path: Assets/Script Persistence/With Persistence/_Scenes/LevelA_WithPersist.unity
     guid: f5b3b342b44496d49ba0ecdd764cd416
   - enabled: 1
-    path: Assets/Script Persistence/With Persistence/Scenes/LevelB_WithPersist.unity
+    path: Assets/Script Persistence/With Persistence/_Scenes/LevelB_WithPersist.unity
     guid: acbf42120c9e31e49abd51be4c09823c
   m_configObjects: {}

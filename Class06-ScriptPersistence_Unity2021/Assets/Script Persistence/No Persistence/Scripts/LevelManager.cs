@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+namespace NonPersisting
 {
-    public string previousLevel;
-    public string currentLevel;
-
-    public void LoadLevel(string levelName)
+    public class LevelManager : MonoBehaviour
     {
-        // store current scene name as previous level before loading the new scene
-        previousLevel = SceneManager.GetActiveScene().name;
+        public string previousLevel;
+        public string currentLevel;
 
-        SceneManager.LoadScene(levelName);
+        public void LoadLevel(string levelName)
+        {
+            // store current scene name as previous level before loading the new scene
+            previousLevel = SceneManager.GetActiveScene().name;
 
-        // store newly loaded scene name as the current level
-        currentLevel = levelName;
+            SceneManager.LoadScene(levelName);
+
+            // store newly loaded scene name as the current level
+            currentLevel = levelName;
+        }
     }
 }
