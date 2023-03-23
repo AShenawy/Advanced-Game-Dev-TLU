@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class EventSphere : MonoBehaviour
 {
@@ -12,36 +14,26 @@ public class EventSphere : MonoBehaviour
     {
         mesh = GetComponent<MeshRenderer>();
 
-
-    }
-
-    private void OnEnable()
-    {
+        // Subscribe to the events with functions to call once an event is raised/invoked
         EventCube.OnActivate += ActivateSphere;
-        EventCube.OnActivate += Activate;
         EventCube.OnDeactivate += DeactivateSphere;
     }
 
-
-    public void Activate(int value)
+    public void ActivateSphere()
     {
-
-    }
-
-    public void ActivateSphere(int v)
-    {
-        print("Activate Event Invoked!");
+        print("Activating " + name);
         mesh.material = matActive;
     }
 
     public void DeactivateSphere()
     {
-        print("Deactivate Event Invoked!");
+        print("Deactivating " + name);
         mesh.material = matInactive;
     }
 
-    private void OnDisable()
+    void OnDestroy()
     {
+        // Unsubscribe from the events in case thig game object is destroyed in the scene
         EventCube.OnActivate -= ActivateSphere;
         EventCube.OnDeactivate -= DeactivateSphere;
     }

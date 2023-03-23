@@ -5,18 +5,14 @@ public class DelayedHello : MonoBehaviour
 {
     public float waitTime = 1.5f;
 
-    IEnumerator coroutine;
+    bool isCoroutineRunning;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (coroutine == null)
-            {
-                coroutine = SayHelloAfter();
-                // Can be called directly
-                StartCoroutine(SayHelloAfter());
-            }
+            // Can be called directly
+            StartCoroutine(SayHelloAfter());
         }
 
         if (Input.GetKeyDown(KeyCode.T))
@@ -27,30 +23,36 @@ public class DelayedHello : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            print("Trying to stop Hello coroutine");
             StopCoroutine("SayHelloAfter");
+
+            // Set the boolean to false in case of early stop,
+            // where the coroutine won't finish or be able to set the bool
+            isCoroutineRunning = false;
         }
     }
 
-    bool isCorotStarted;
+  
     // Coroutines must always return IEnumerator and contain at least one yield expression
     IEnumerator SayHelloAfter()
     {
-        if (isCorotStarted)
+        if (isCoroutineRunning)
         {
+            // Exit the coroutine and don't continue if it's already running
+            print("Coroutine is already running");
             yield break;
         }
 
-        isCorotStarted = true;
+        isCoroutineRunning = true;
 
-        print("Gonna say hello! - " + Time.time.ToString("0.00"));
+        print("Gonna say hello! - at: " + Time.time.ToString("0.00"));
 
         // Stop execution using a yield and WaitForSeconds
         yield return new WaitForSeconds(waitTime);
 
         // Continue execution after waitTime has elapsed
-        print("Hello! - " + Time.time.ToString("0.00"));
+        print("Hello! - at: " + Time.time.ToString("0.00"));
 
-        isCorotStarted = false;
-        coroutine = null;
+        isCoroutineRunning = false;
     }
 }

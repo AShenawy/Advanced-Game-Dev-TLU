@@ -15,13 +15,13 @@ public class Sphere : MonoBehaviour
 
     public void ActivateSphere()
     {
-        print("Activate method called!");
+        print("Activating " + name);
         mesh.material = matActive;
     }
 
     public void DeactivateSphere()
     {
-        print("Deactivate method called!");
+        print("Deactivating " + name);
         mesh.material = matInactive;
     }
 }

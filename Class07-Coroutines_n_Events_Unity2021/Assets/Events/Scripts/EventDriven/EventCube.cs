@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class EventCube : MonoBehaviour
 {
-    public static event UnityAction<int> OnActivate;
+    // Declare events
+    public static event UnityAction OnActivate;
     public static event UnityAction OnDeactivate;
-
 
     void Update()
     {
@@ -25,13 +25,16 @@ public class EventCube : MonoBehaviour
     void Activate()
     {
         print("Invoking Activate Event!");
-        OnActivate?.Invoke(2);
-        
+
+        // Invoke the event after checking if it's not null (has subscribers)
+        OnActivate?.Invoke();
     }
 
     void Deactivate()
     {
         print("Invoking Deactivate Event!");
-        OnDeactivate();
+
+        // Invoke the event after checking if it's not null (has subscribers)
+        OnDeactivate?.Invoke();
     }
 }

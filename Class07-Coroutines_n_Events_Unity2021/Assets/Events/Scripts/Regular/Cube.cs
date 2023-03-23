@@ -21,7 +21,7 @@ public class Cube : MonoBehaviour
 
     void Activate()
     {
-        print("Activate Spheres!");
+        print("Activating Spheres!");
         foreach (Sphere sphere in spheres)
         {
             sphere.ActivateSphere();
@@ -30,7 +30,7 @@ public class Cube : MonoBehaviour
 
     void Deactivate()
     {
-        print("Dectivate Spheres!");
+        print("Dectivating Spheres!");
         foreach(Sphere sphere in spheres)
         {
             sphere.DeactivateSphere();
