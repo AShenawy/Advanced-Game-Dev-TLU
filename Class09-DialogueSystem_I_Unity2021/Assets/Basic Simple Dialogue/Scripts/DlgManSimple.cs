@@ -7,6 +7,7 @@ public class DlgManSimple : MonoBehaviour
 
     [Header("Public Variables")]
     public Canvas dialogueDisplay;
+    [Tooltip("Your dialogue text goes here")]
     public Text textDisplay;
 
     // This is the small [>] button next to dialogue display text
@@ -27,7 +28,6 @@ public class DlgManSimple : MonoBehaviour
     // Make dialogue manager a singleton
     private void Awake()
     {
-        
         if (instance == null)
         {
             instance = this;
@@ -67,6 +67,7 @@ public class DlgManSimple : MonoBehaviour
         ShowDialogueDisplay();
     }
 
+    // Called from canvas button(s)
     public void OnContinueButtonClicked()
     {
         if (dialogueProgress < dialogueLines.Length)
