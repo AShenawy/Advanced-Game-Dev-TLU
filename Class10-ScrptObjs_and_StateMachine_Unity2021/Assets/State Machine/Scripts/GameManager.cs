@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
         ChangeState(startingState);
     }
 
-
     void Update()
     {
         // Keep the state going

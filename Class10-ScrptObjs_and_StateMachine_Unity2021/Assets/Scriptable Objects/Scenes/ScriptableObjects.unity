@@ -287,13 +287,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1293534999}
+        m_TargetAssemblyTypeName: ItemDisplay, Assembly-CSharp
+        m_MethodName: SetItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 11400000, guid: a3b8a439dff71e9468df0c9e1ce8262f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ItemData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
