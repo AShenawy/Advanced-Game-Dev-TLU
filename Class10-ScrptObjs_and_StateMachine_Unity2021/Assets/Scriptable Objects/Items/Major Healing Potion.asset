@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 111b488e4ace50144a729a6ec342e723, type: 3}
-  m_Name: Healing Potion
+  m_Name: Major Healing Potion
   m_EditorClassIdentifier: 
-  itemName: Healing Potion
+  itemName: Major Life Potion
   itemIcon: {fileID: 21300000, guid: 4fb86655f33f45b4aba44a7342ba6a0e, type: 3}
   usageCount: 3
   maxAmount: 5

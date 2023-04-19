@@ -1,8 +1,10 @@
 using UnityEngine;
 
+public enum GameState { MainMenu, GameRunning, GamePaused }
+
 public class BaseState : ScriptableObject
 {
-    public GameStates state;
+    public GameState state;
     public BaseState nextState;
 
     public virtual void Enter()
@@ -23,5 +25,3 @@ public class BaseState : ScriptableObject
         GameManager.instance.ChangeState(nextState);
     }
 }
-
-public enum GameStates { MainMenu, GameRunning, GamePaused }
