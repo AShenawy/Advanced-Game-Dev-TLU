@@ -32,7 +32,7 @@ public class LamdaExamples : MonoBehaviour
     // ========== FUNCTIONS ===========
 
     // Another form or Lambda Expression is a shortend function
-    // Note we don't have braces or "return" if it's in one line.
+    // Note we don't have braces or "return", but this only works for 1 line function body
     public int Add(int a, int b) => a + b;
 
 
