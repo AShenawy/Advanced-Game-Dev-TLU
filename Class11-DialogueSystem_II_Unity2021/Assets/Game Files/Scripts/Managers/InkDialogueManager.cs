@@ -168,9 +168,21 @@ public class InkDialogueManager : MonoBehaviour
         // Remove dialogue UI and clear the current story
         RefreshScreen();
         Destroy(dialogueCanvas.gameObject); // Since dialogueCanvas sits on the top dialogue game object, all UI is destoryed
-        story = null;
+        ClearReferences();
 
         // Allow player to move again
         player.FreezePlayer(false);
+    }
+
+    void ClearReferences()
+    {
+        // Clear story references
+        story = null;
+        dialogueNPC = null;
+
+        // Clear UI references after canvas is removed from scene
+        dialogueCanvas = null;
+        textDisplay = null;
+        choiceButtons = null;
     }
 }

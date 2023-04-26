@@ -11,7 +11,7 @@ public class LamdaExamples : MonoBehaviour
     // Lambda can be used for properties. This is a get only property
     public string PlayerNameLambdaGetter => playerName;
 
-    // Shorthand of writing a full getter/setter
+    // Shorthand of writing a full getter
     public string PlayerNameNormalGetter
     {
         get
