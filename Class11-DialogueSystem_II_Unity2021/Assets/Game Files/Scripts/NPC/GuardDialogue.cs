@@ -33,7 +33,7 @@ public class GuardDialogue : DialogueBase
     }
 
     // Specific methods for this guard npc
-    void PerformDialogueActions()
+    protected override void PerformDialogueActions()
     {
         // playerGotTrinket prevents giving player the trinket more than once
         if (hasGivenTrinket && !playerGotTrinket)

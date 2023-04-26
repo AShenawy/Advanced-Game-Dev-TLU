@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6120963403992888337}
   - component: {fileID: 6120963403992888351}
   - component: {fileID: 6120963403992888336}
+  - component: {fileID: 992434022}
   m_Layer: 0
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,6 +46,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -94,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -108,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 0.37}
+  m_Size: {x: 1.31, y: 1.85}
   m_EdgeRadius: 0
 --- !u!114 &6120963403992888336
 MonoBehaviour:
@@ -122,7 +125,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6777427379cfd14fb3a2a16af509e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speechBubblePrefab: {fileID: 2537348173135528820, guid: f3ecdbe99bc281840876109e7be74926, type: 3}
   inkAsset: {fileID: 4900000, guid: ebab1df53e67dd441a5c9de1bc678398, type: 3}
   visitCount: 0
   isHostile: 0
   hasGivenTrinket: 0
+--- !u!95 &992434022
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120963403992888339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97768cdc32600c14e80f56210774de78, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

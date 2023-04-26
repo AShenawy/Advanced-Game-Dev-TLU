@@ -69,4 +69,9 @@ public class DialogueBase : MonoBehaviour
     {
         dialogueVariables = variables;
     }
+
+    protected virtual void PerformDialogueActions()
+    {
+        // To be implemented by child classes
+    }
 }
