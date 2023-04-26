@@ -1,27 +1,33 @@
 fileFormatVersion: 2
-guid: c8d49ebad3b332f459ea3ce149399abf
+guid: c14ad79d002906d4c931ebf191a4b354
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1334909474723237668
-    second: _Attack2NoMovement_0
+      213: 6750947459597745425
+    second: _CrouchWalk_0
   - first:
-      213: -7080961375967834571
-    second: _Attack2NoMovement_1
+      213: -6664716939228246922
+    second: _CrouchWalk_1
   - first:
-      213: -4680654449115406751
-    second: _Attack2NoMovement_2
+      213: 5733392894861777977
+    second: _CrouchWalk_2
   - first:
-      213: -7127675528933595853
-    second: _Attack2NoMovement_3
+      213: 7526816674047155283
+    second: _CrouchWalk_3
   - first:
-      213: 6855488510596582009
-    second: _Attack2NoMovement_4
+      213: -4448183025410190026
+    second: _CrouchWalk_4
   - first:
-      213: -7259909186463099801
-    second: _Attack2NoMovement_5
+      213: 1905497345166633871
+    second: _CrouchWalk_5
+  - first:
+      213: -2528518750548876906
+    second: _CrouchWalk_6
+  - first:
+      213: 4288481546058834091
+    second: _CrouchWalk_7
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -42,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,6 +87,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -117,17 +125,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Attack2NoMovement_0
+      name: _CrouchWalk_0
       rect:
         serializedVersion: 2
-        x: 31
+        x: 44
         y: 0
-        width: 36
-        height: 36
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42f8e28381d868210800000000000000
-      internalID: 1334909474723237668
+      spriteID: 11d36aa42fe20bd50800000000000000
+      internalID: 6750947459597745425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Attack2NoMovement_1
+      name: _CrouchWalk_1
       rect:
         serializedVersion: 2
-        x: 147
+        x: 164
         y: 0
-        width: 40
-        height: 36
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53e0d25252f5bbd90800000000000000
-      internalID: -7080961375967834571
+      spriteID: 67c85c4414b2283a0800000000000000
+      internalID: -6664716939228246922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Attack2NoMovement_2
+      name: _CrouchWalk_2
       rect:
         serializedVersion: 2
-        x: 268
+        x: 284
         y: 0
-        width: 75
-        height: 40
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16edf14e399fa0fb0800000000000000
-      internalID: -4680654449115406751
+      spriteID: 93c1cf7067a119f40800000000000000
+      internalID: 5733392894861777977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Attack2NoMovement_3
+      name: _CrouchWalk_3
       rect:
         serializedVersion: 2
-        x: 385
+        x: 404
         y: 0
-        width: 62
-        height: 35
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3352ba7ded8651d90800000000000000
-      internalID: -7127675528933595853
+      spriteID: 35c5112e2ef947860800000000000000
+      internalID: 7526816674047155283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Attack2NoMovement_4
+      name: _CrouchWalk_4
       rect:
         serializedVersion: 2
-        x: 505
+        x: 524
         y: 0
-        width: 44
-        height: 35
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a81eb7a76932f50800000000000000
-      internalID: 6855488510596582009
+      spriteID: 635d08a1b11e442c0800000000000000
+      internalID: -4448183025410190026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Attack2NoMovement_5
+      name: _CrouchWalk_5
       rect:
         serializedVersion: 2
-        x: 625
+        x: 644
         y: 0
-        width: 43
-        height: 35
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +260,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 764954f3f0f9f3b90800000000000000
-      internalID: -7259909186463099801
+      spriteID: f8b6b1b5dbfa17a10800000000000000
+      internalID: 1905497345166633871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _CrouchWalk_6
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 0
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691ae91d795e8ecd0800000000000000
+      internalID: -2528518750548876906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _CrouchWalk_7
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0a7aaae3fb38b30800000000000000
+      internalID: 4288481546058834091
       vertices: []
       indices: 
       edges: []
@@ -256,6 +318,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      _CrouchWalk_4: -4448183025410190026
+      _CrouchWalk_7: 4288481546058834091
+      _CrouchWalk_0: 6750947459597745425
+      _CrouchWalk_5: 1905497345166633871
+      _CrouchWalk_1: -6664716939228246922
+      _CrouchWalk_3: 7526816674047155283
+      _CrouchWalk_2: 5733392894861777977
+      _CrouchWalk_6: -2528518750548876906
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

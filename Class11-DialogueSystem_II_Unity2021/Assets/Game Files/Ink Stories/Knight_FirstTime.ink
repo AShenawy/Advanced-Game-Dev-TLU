@@ -1,6 +1,8 @@
 // Other story sections
 INCLUDE Knight_SecondTime
 
+
+
 // Variables
 VAR visitCount = 0
 VAR isHostile = false
@@ -8,8 +10,8 @@ VAR hasGivenTrinket = false
 
 
 // Decide where the story begins on interaction
-{visitCount > 0:
-    {hasGivenTrinket: 
+{ visitCount > 0:
+    { hasGivenTrinket: 
         -> visit_friendly
       - else:
         { isHostile: -> visit_unfriendly | -> visit_neutral }
@@ -68,7 +70,7 @@ He was a true adventurer. I ask you that you place it on the highest mountain yo
 May it bring his soul joy... to once again behold the wonders of the world.
 + [It shall be done]
     You have my gratitude, noble warrior.
-        + + [Leave] -> END
+    + + [Leave] -> END
 
 == declined_favour ==
 I understand. We only just met anyways.

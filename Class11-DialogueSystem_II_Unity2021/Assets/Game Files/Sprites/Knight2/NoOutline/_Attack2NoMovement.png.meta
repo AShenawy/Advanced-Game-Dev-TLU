@@ -1,39 +1,27 @@
 fileFormatVersion: 2
-guid: 495e247b9483a104d9ac9ad2bb926f47
+guid: c8d49ebad3b332f459ea3ce149399abf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3204480812468917802
-    second: _Idle_0
+      213: 1334909474723237668
+    second: _Attack2NoMovement_0
   - first:
-      213: 3522011133049882637
-    second: _Idle_1
+      213: -7080961375967834571
+    second: _Attack2NoMovement_1
   - first:
-      213: -2907624155043114565
-    second: _Idle_2
+      213: -4680654449115406751
+    second: _Attack2NoMovement_2
   - first:
-      213: -970496918810939563
-    second: _Idle_3
+      213: -7127675528933595853
+    second: _Attack2NoMovement_3
   - first:
-      213: -6943447523856610506
-    second: _Idle_4
+      213: 6855488510596582009
+    second: _Attack2NoMovement_4
   - first:
-      213: -7487436801176157817
-    second: _Idle_5
-  - first:
-      213: 8706567805487113664
-    second: _Idle_6
-  - first:
-      213: 4588736447598766473
-    second: _Idle_7
-  - first:
-      213: -436730644578740556
-    second: _Idle_8
-  - first:
-      213: 6042557600975065454
-    second: _Idle_9
+      213: -7259909186463099801
+    second: _Attack2NoMovement_5
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -54,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -92,6 +81,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -129,17 +119,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Idle_0
+      name: _Attack2NoMovement_0
       rect:
         serializedVersion: 2
-        x: 45
+        x: 31
         y: 0
-        width: 19
-        height: 37
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a26d3c4225a987c20800000000000000
-      internalID: 3204480812468917802
+      spriteID: 42f8e28381d868210800000000000000
+      internalID: 1334909474723237668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Idle_1
+      name: _Attack2NoMovement_1
       rect:
         serializedVersion: 2
-        x: 165
+        x: 147
         y: 0
-        width: 19
-        height: 37
+        width: 40
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d08c8601772b0e030800000000000000
-      internalID: 3522011133049882637
+      spriteID: 53e0d25252f5bbd90800000000000000
+      internalID: -7080961375967834571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Idle_2
+      name: _Attack2NoMovement_2
       rect:
         serializedVersion: 2
-        x: 285
+        x: 268
         y: 0
-        width: 19
-        height: 37
+        width: 75
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb15f4a7c3b06a7d0800000000000000
-      internalID: -2907624155043114565
+      spriteID: 16edf14e399fa0fb0800000000000000
+      internalID: -4680654449115406751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Idle_3
+      name: _Attack2NoMovement_3
       rect:
         serializedVersion: 2
-        x: 405
+        x: 385
         y: 0
-        width: 19
-        height: 37
+        width: 62
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55fa9aab13a1882f0800000000000000
-      internalID: -970496918810939563
+      spriteID: 3352ba7ded8651d90800000000000000
+      internalID: -7127675528933595853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Idle_4
+      name: _Attack2NoMovement_4
       rect:
         serializedVersion: 2
-        x: 525
+        x: 505
         y: 0
-        width: 19
-        height: 37
+        width: 44
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b06f7d34be3af90800000000000000
-      internalID: -6943447523856610506
+      spriteID: 97a81eb7a76932f50800000000000000
+      internalID: 6855488510596582009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Idle_5
+      name: _Attack2NoMovement_5
       rect:
         serializedVersion: 2
-        x: 645
+        x: 625
         y: 0
-        width: 19
-        height: 37
+        width: 43
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,92 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78145b346e7471890800000000000000
-      internalID: -7487436801176157817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Idle_6
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 0
-        width: 19
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c569ea2a41f3d870800000000000000
-      internalID: 8706567805487113664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Idle_7
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 0
-        width: 19
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9892307ac777eaf30800000000000000
-      internalID: 4588736447598766473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Idle_8
-      rect:
-        serializedVersion: 2
-        x: 1005
-        y: 0
-        width: 19
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b65b5beacb60f9f0800000000000000
-      internalID: -436730644578740556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Idle_9
-      rect:
-        serializedVersion: 2
-        x: 1125
-        y: 0
-        width: 19
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6194fc8f1a7bd350800000000000000
-      internalID: 6042557600975065454
+      spriteID: 764954f3f0f9f3b90800000000000000
+      internalID: -7259909186463099801
       vertices: []
       indices: 
       edges: []
@@ -352,6 +270,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      _Attack2NoMovement_3: -7127675528933595853
+      _Attack2NoMovement_5: -7259909186463099801
+      _Attack2NoMovement_2: -4680654449115406751
+      _Attack2NoMovement_4: 6855488510596582009
+      _Attack2NoMovement_0: 1334909474723237668
+      _Attack2NoMovement_1: -7080961375967834571
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
