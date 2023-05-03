@@ -31,7 +31,7 @@ public class DialogueBase : MonoBehaviour
         {
             // If the player is within range, allow this NPC's dialogue to start
             canSpeak = true;
-            speechBubble = Instantiate(speechBubblePrefab, new Vector3(transform.position.x, transform.position.y + 1.5f), Quaternion.identity, transform);
+            speechBubble = Instantiate(speechBubblePrefab, transform.position + new Vector3(0, 1.5f), Quaternion.identity, transform);
         }
     }
 
