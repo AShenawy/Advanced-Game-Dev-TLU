@@ -20,6 +20,7 @@ namespace GameConfiguration
             float volumeLevel = saveManager.GetPrefFloat("volume");
             if (volumeLevel > -1)
             {
+                print("Found volume setting: " + volumeLevel);
                 soundSource.volume = volumeLevel;
             }
             else
@@ -29,6 +30,10 @@ namespace GameConfiguration
 
 
             bool muteValue = saveManager.GetPrefBool("isMuted");
+            if (muteValue)
+            {
+                print("Found mute setting: true");
+            }
             AudioListener.volume = muteValue ? 0f : 1f;
         }
 

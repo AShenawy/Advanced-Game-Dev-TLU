@@ -19,13 +19,6 @@ namespace GameSaveGeneral
             }
         }
 
-
-        void Start()
-        {
-
-        }
-
-
         // From ManagerController we know that this Initialise is called after Initialie in the GameSaveManager
         public override void Initialise()
         {
@@ -35,12 +28,10 @@ namespace GameSaveGeneral
             }
         }
 
-
         void SetPlayerPosition()
         {
             player.transform.position = GameSaveManager.instance.playerPosition;
         }
-
 
         // Button click action
         public void OnLoadButtonClicked()

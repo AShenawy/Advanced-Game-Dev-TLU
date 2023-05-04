@@ -11,7 +11,7 @@ public class LamdaExamples : MonoBehaviour
     // Lambda can be used for properties. This is a get only property
     public string PlayerNameLambdaGetter => playerName;
 
-    // Shorthand of writing a full getter/setter
+    // Shorthand of writing a full getter
     public string PlayerNameNormalGetter
     {
         get
@@ -31,14 +31,15 @@ public class LamdaExamples : MonoBehaviour
 
     // ========== FUNCTIONS ===========
 
-    // Another form or Lambda Expression is a shortend function
+    // Another form of Lambda Expression is a shortend function
     // Note we don't have braces or "return" if it's in one line.
-    public int Add(int a, int b) => a + b;
-
     public int AddNormal(int a, int b)
     {
         return a + b;
     }
+    
+    public int AddLambda(int a, int b) => a + b;
+
 
     // ========== ANONYMOUS FUNCTIONS ===========
 
@@ -77,12 +78,11 @@ public class LamdaExamples : MonoBehaviour
     {
         // We can use an Anonymous Method for in-line use and to throw away after we're done,
         // as it won't be used anywhere else except in this case
-
-        Player foundPlayer = players.Find(player => player.name == playerName);
+        
+        Player foundPlayer = players.Find(p => p.name == playerName);
         
         return foundPlayer;
     }
-
 
 
     // ========== CALLBACKS ===========
@@ -113,7 +113,7 @@ public class LamdaExamples : MonoBehaviour
         myButton.onClick.AddListener(() =>
         {
             GetPlayerByNameAnonymousFunction("Doggo");
-            Add(2, 4);
+            AddLambda(2, 4);
         });
     }
 

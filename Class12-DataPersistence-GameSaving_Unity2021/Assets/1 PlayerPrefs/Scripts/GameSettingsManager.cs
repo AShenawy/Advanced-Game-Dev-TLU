@@ -21,12 +21,15 @@ namespace GameConfiguration
         void LoadGameSettings()
         {
             float volumeLevel = saveManager.GetPrefFloat("volume");
+
+            // Check if the value is valid before using it
             if (volumeLevel > -1f)
             {
                 volumeSlider.value = volumeLevel;
             }
             else
             {
+                // If a saved value wasn't found, use a default value
                 volumeSlider.value = 1f;
             }
 

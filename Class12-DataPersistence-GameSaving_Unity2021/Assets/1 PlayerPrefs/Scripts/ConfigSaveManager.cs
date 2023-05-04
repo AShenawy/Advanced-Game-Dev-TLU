@@ -21,6 +21,9 @@ namespace GameConfiguration
             else
             {
                 Debug.LogWarning("Player prefs key " + name + " not found");
+
+                // Return a value that is considered invalid in your code usage
+                // Sometimes -1 may not be invalid
                 return -1;
             }
         }
@@ -41,6 +44,9 @@ namespace GameConfiguration
             else
             {
                 Debug.LogWarning("Player prefs key " + name + " not found");
+
+                // Return a value that is considered invalid in your code usage
+                // Sometimes -1 may not be invalid
                 return -1f;
             }
         }
@@ -80,12 +86,12 @@ namespace GameConfiguration
             }
 
 
-            // OR this way: Ternary operator
+            // OR: Ternary operator
             int ternaryBool = value ? 1 : 0;
             PlayerPrefs.SetInt(name, ternaryBool);
 
 
-            // OR this way: C# Convert class
+            // OR: C# Convert class
             int convertedBool = System.Convert.ToInt32(value);
             PlayerPrefs.SetInt(name, convertedBool);
         }
@@ -107,11 +113,11 @@ namespace GameConfiguration
                 }
 
 
-                // OR this way: Ternary operator
+                // OR: Ternary operator
                 return intValue == 1 ? true : false;
 
 
-                // OR this way: C# Convert class
+                // OR: C# Convert class
                 bool convertedInt = System.Convert.ToBoolean(intValue);
                 return convertedInt;
             }
@@ -127,6 +133,7 @@ namespace GameConfiguration
 
         public void ResetAll()
         {
+            print("Resetting player preferences");
             PlayerPrefs.DeleteAll();
         }
     }
