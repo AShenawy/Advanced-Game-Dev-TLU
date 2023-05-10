@@ -34,6 +34,12 @@ namespace GameSaveGeneral
         }
 
         // Button click action
+        public void OnSaveButtonClicked()
+        {
+            GameSaveManager.instance.SaveGameData();
+        }
+
+        // Button click action
         public void OnLoadButtonClicked()
         {
             GameSaveManager.instance.LoadGameData();
