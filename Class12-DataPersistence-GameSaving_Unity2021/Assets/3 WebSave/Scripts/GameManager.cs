@@ -33,6 +33,11 @@ namespace GameSaveWeb
             player.transform.position = GameSaveManager.instance.playerPosition;
         }
 
+        public void OnSaveButtonClicked()
+        {
+            GameSaveManager.instance.SaveGame();
+        }
+
         // Button click action
         public void OnLoadButtonClicked()
         {

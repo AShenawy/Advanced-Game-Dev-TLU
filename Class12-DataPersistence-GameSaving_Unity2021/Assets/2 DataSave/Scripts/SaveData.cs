@@ -6,7 +6,8 @@ namespace GameSaveGeneral
     [System.Serializable]
     public class SaveData
     {
-        // All values to be stored on disk should be either public or have [SerializeField] attribute
+        // All values/variables to be stored on disk should be either public or
+        // have [SerializeField] attribute if they're private
         public float[] position = new float[3];
 
         // Methods are not saved to disk
