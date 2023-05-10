@@ -37,12 +37,16 @@ namespace GameSaveGeneral
         public void OnSaveButtonClicked()
         {
             GameSaveManager.instance.SaveGameData();
+            //GameSaveManager.instance.SaveJSON();
+            //GameSaveManager.instance.SaveBinary();
         }
 
         // Button click action
         public void OnLoadButtonClicked()
         {
             GameSaveManager.instance.LoadGameData();
+            //GameSaveManager.instance.LoadJSON();
+            //GameSaveManager.instance.LoadBinary();
 
             if (GameSaveManager.instance.isDataLoaded)
             {
