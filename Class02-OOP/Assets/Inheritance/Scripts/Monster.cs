@@ -6,6 +6,7 @@ public class Monster : MonoBehaviour
 {
     // In the Base/Parent class we add all the common data and functionality
 
+    //[HideInInspector]
     public int healthPoints;
     public int attackPoints;
     public int defencePoints;
