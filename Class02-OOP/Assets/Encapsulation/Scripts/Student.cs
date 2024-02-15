@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Student : MonoBehaviour
 {
-    // Private variables are inaccessible via other classes/objects
+    // Private variables are inaccessible to other classes/objects and
+    // Unity doesn't show them in the Inspector either. But adding
+    // the [SerializeField] property makes them show up in the Inspector window
     [SerializeField]
     private string myUsername = "Fruit Loop";
 
@@ -45,16 +47,17 @@ public class Student : MonoBehaviour
     // ######       AUTOMATIC PROPERTIES          #######
 
     // Automatic properties mean we only declare whether they're 'get', 'set', or both. They have no body like above
-    // Since it has no body, it returns nothing if we don't assign it a value somewhere else in the code
-    public string UsernameAutoProperty { get; set; }
+    // Since the property has no body, it returns nothing if we don't assign it a value somewhere else in the code, or
+    // we can initialise it with a value just like our variables
+    public string UsernameAutoProperty { get; set; } = "Initial value";
 
 
-    // This property's value is accessible from anywhere (public and has 'get')
+    // This property's value is accessible from anywhere (is public and has 'get')
     // but its value is only set inside its class (has 'private set')
     public string PasswordAutoProperty { get; private set; }
 
 
-    // This property can only be set from other classes (public variable and has 'set')
+    // This property can only be set from other classes (is public variable and has 'set')
     // but its value is only accessible from inside its class (has 'private get')
     public int OnlyPublicSetProperty { private get; set; }
 

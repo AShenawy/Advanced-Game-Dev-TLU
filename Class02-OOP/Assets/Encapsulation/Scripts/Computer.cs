@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Computer : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Computer : MonoBehaviour
 
     public string studentUsername;
     public string studentPassword;
+
+    public Text textUsername;
+    public Text textPassword;
     
 
     void Start()
@@ -19,12 +23,25 @@ public class Computer : MonoBehaviour
 
         // This won't work, because we added a check against empty
         // usernames. Hit Play in Unity to see the console message!
-        student.Username = "";
+        student.SetUsername("");
     }
 
     public void NewStudentSignIn(Student newStudent)
     {
         studentUsername = newStudent.Username;
         studentPassword = newStudent.GetPassword();
+        UpdateScreenDisplay();
+    }
+
+    public void UpdateScreenDisplay()
+    {
+        textUsername.text = studentUsername;
+
+        string passwordText = "";
+        for (int i = 0; i < studentPassword.Length; i++)
+        {
+            passwordText += "*";
+        }
+        textPassword.text = passwordText;
     }
 }
