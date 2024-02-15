@@ -6,7 +6,7 @@ public class Monster : MonoBehaviour
 {
     // In the Base/Parent class we add all the common data and functionality
 
-    public int hp;
+    public int healthPoints;
     public int attackPoints;
     public int defencePoints;
 
@@ -19,6 +19,6 @@ public class Monster : MonoBehaviour
     public void TakeDamage(int amount)
     {
         // Take damage from attacks
-        hp -= amount;
+        healthPoints -= amount;
     }
 }

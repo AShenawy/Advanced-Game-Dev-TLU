@@ -6,8 +6,8 @@ public class Goblin : Monster
 {
     private void Start()
     {
-        // All (public) variables and functions are accessible by the Child class
-        hp = 20;
+        // All public variables and functions are accessible by the Child class
+        healthPoints = 20;
         attackPoints = 50;
         TakeDamage(4);
     }
