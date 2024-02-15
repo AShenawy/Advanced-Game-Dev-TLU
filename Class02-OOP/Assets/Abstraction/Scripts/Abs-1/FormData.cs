@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FormData : MonoBehaviour
 {
     public Person applicant;
 
-    public string fullName;
-    public int age;
+    public string applicantName;
+    public int applicantAge;
+
+    public Text formText;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +23,14 @@ public class FormData : MonoBehaviour
     // Start() calls FillForm() but has no idea what it actually does
     public void FillForm()
     {
-        fullName = applicant.GetFullName();
-        age = applicant.GetAge();
+        applicantName = applicant.GetFullName();
+        applicantAge = applicant.GetAge();
     }
 
     public void ShowFormData()
     {
-        print($"The person's full name is: {fullName}");
-        print($"{fullName}'s age is: {age}");
+        formText.text = $"The applicant's full name is:\n" +
+                        $"{applicantName}\n\n" +
+                        $"Their age is: {applicantAge}";
     }
 }
