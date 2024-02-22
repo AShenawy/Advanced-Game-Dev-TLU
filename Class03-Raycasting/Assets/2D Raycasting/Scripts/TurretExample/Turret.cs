@@ -28,6 +28,12 @@ public class Turret : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(transform.position, Vector2.down * 20f);
+    }
+
     void Shoot()
     {
         print("Shooting at player!");
