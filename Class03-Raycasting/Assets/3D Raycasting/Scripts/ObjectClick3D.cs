@@ -13,12 +13,12 @@ public class ObjectClick3D : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        print("Mouse entered collider of " + name);
+        print("Entered " + name + "'s collider");
     }
 
     private void OnMouseExit()
     {
-        print("Mouse exited collider of " + name);
+        print("Exited " + name + "'s collider");
     }
 
 }
