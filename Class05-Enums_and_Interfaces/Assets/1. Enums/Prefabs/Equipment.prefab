@@ -126,4 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energyValue: 9
   player: {fileID: 0}
-  type: 1
+  type: 20
