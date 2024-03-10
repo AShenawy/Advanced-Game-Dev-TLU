@@ -12,19 +12,22 @@ public class DelayedHello : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             // Can be called directly
-            StartCoroutine(DelayedGreeting());
+            StartCoroutine(DelayedGreetingCoroutine());
         }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
             // Or called by string name
             StartCoroutine("DelayedGreeting");
+
+            // C# nameof keyword helps with string errors
+            StartCoroutine(nameof(DelayedGreetingCoroutine));
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             print("Trying to stop coroutine");
-            StopCoroutine("DelayedGreeting");
+            StopCoroutine(nameof(DelayedGreetingCoroutine));
         }
     }
 
@@ -35,8 +38,9 @@ public class DelayedHello : MonoBehaviour
 
 
     // Coroutines must always return IEnumerator and contain at least one yield expression
-    IEnumerator DelayedGreeting()
+    IEnumerator DelayedGreetingCoroutine()
     {
+        // We can use a boolean to ensure coroutine runs only once
         if (isCoroutineRunning)
         {
             print("coroutine already running");

@@ -21,14 +21,15 @@ public class FadeOut : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Normal function call
+            //// Normal function call
             //FadeAlphaNormal();
 
-            // Direct corouting call(cannot be selectively stopped)
+            //// Direct corouting call (cannot be selectively stopped)
             //StartCoroutine(FadeAlphaCoroutine());
 
             //// Calling coroutine by its string name
             //StartCoroutine("FadeAlphaCoroutine");
+            //// OR with the nameof keyword
             //StartCoroutine(nameof(FadeAlphaCoroutine));
 
             // Calling coroutine via a reference value and checking if it's not already running
@@ -40,11 +41,12 @@ public class FadeOut : MonoBehaviour
             {
                 print("coroutine is already running");
             }
-            
         }
+
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            // Null check so we don't get a "null reference" error when calling StopCoroutine
             if (runningCoroutine != null)
             {
                 //// Stopping ALL coroutines running in this script, no matter how they were called
