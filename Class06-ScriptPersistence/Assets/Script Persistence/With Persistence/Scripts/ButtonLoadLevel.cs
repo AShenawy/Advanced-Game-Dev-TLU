@@ -6,7 +6,7 @@ namespace Persisting
 {
     public class ButtonLoadLevel : MonoBehaviour
     {
-        public void LoadLevel(string levelName)
+        public void OnButtonLoadLevel(string levelName)
         {
             // Call the LoadLevel function through the static instance variable
             LevelManagerPersist.instance.LoadLevel(levelName);

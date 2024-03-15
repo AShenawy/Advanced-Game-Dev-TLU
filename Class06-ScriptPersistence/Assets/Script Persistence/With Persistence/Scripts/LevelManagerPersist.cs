@@ -29,6 +29,7 @@ namespace Persisting
             }
         }
 
+        // Unity button action
         public void LoadLevel(string levelName)
         {
             // store current scene name as previous level before loading the new scene

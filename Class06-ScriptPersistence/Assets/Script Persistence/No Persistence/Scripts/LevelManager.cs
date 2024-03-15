@@ -10,6 +10,7 @@ namespace NonPersisting
         public string previousLevel;
         public string currentLevel;
 
+        // Unity button action
         public void LoadLevel(string levelName)
         {
             // store current scene name as previous level before loading the new scene
