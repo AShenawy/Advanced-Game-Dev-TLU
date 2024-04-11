@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,19 +8,20 @@ public class DlgManSimple : MonoBehaviour
 
     [Header("Public Variables")]
     public Canvas dialogueDisplay;
+
     [Tooltip("Your dialogue text goes here")]
     public Text textDisplay;
 
-    // This is the small [>] button next to dialogue display text
+    [Tooltip("This is the small [>] button next to dialogue display text")]
     public Button continueSmall;
 
-    // This is the big invisible button that covers the entire screen
+    [Tooltip("This is the big invisible button that covers the entire screen")]
     public Button continueBig;
 
 
     [Header("Private Variables")]
     [SerializeField]
-    private string[] dialogueLines;
+    private List<string> dialogueLines;
 
     [SerializeField]
     private int dialogueProgress = 0;
@@ -47,18 +49,34 @@ public class DlgManSimple : MonoBehaviour
         HideDialogueDisplay();
     }
 
-    public void StartDialogue(string[] lines)
+    private void ClearText()
     {
-        if (lines.Length < 1)
+        textDisplay.text = "";
+        dialogueLines = null;
+    }
+
+    private void ShowDialogueDisplay()
+    {
+        dialogueDisplay.gameObject.SetActive(true);
+    }
+
+    private void HideDialogueDisplay()
+    {
+        dialogueDisplay.gameObject.SetActive(false);
+    }
+
+    public void StartDialogue(List<string> lines)
+    {
+        if (lines.Count < 1)
         {
-            // pieces array is empty and there's no dialogue to display
-            // exit the function
+            // Incoming lines list is empty. No dialogue to display
+            // Exit the function
             return;
         }
         else if (dialogueLines != null)
         {
-            // another dialogue is in progress
-            // exit the function
+            // Another dialogue is in progress
+            // Exit the function
             return;
         }
 
@@ -70,14 +88,14 @@ public class DlgManSimple : MonoBehaviour
     // Called from canvas button(s)
     public void OnContinueButtonClicked()
     {
-        if (dialogueProgress < dialogueLines.Length)
+        if (dialogueProgress < dialogueLines.Count)
         {
-            // havent' reached the end of the dialogue lines
+            // More dialogue lines remaining
             AdvanceDialogue();
         }
         else
         {
-            // all dialogue lines exhausted
+            // All dialogue lines exhausted
             EndDialogue();
         }
     }
@@ -93,21 +111,5 @@ public class DlgManSimple : MonoBehaviour
         HideDialogueDisplay();
         ClearText();
         dialogueProgress = 0;
-    }
-
-    private void ClearText()
-    {
-        textDisplay.text = "";
-        dialogueLines = null;
-    }
-
-    private void ShowDialogueDisplay()
-    {
-        dialogueDisplay.gameObject.SetActive(true);
-    }
-
-    private void HideDialogueDisplay()
-    {
-        dialogueDisplay.gameObject.SetActive(false);
     }
 }
