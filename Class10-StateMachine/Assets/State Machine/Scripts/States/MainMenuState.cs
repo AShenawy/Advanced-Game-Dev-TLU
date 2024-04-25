@@ -28,6 +28,7 @@ public class MainMenuState : BaseState
 
     public override void Exit()
     {
+        Time.timeScale = 1;
         GameManager.instance.startGameUI.gameObject.SetActive(false);
 
         base.Exit();
