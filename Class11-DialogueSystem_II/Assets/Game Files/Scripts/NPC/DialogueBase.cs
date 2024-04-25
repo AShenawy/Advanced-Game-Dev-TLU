@@ -3,7 +3,8 @@ using Ink.Runtime;
 
 
 // This is the base class for NPC dialogues
-public class DialogueBase : MonoBehaviour
+// The abstract keyword prevents this script from being added to Game Objects. Only it's child objects can
+public abstract class DialogueBase : MonoBehaviour
 {
     [SerializeField] private GameObject speechBubblePrefab;
     private GameObject speechBubble;
