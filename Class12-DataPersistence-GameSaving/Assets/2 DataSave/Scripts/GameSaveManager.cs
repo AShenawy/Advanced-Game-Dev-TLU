@@ -34,19 +34,18 @@ namespace GameSaveGeneral
         // ========= Using the JSON format
         public void SaveJSON()
         {
-            // Make a save path to save the file to
-            string savePath = Application.persistentDataPath + "/saveFile.jsonFile";
-
             // Create an instance of SaveData and fill it in with values to save
             SaveData saveData = new SaveData();
             saveData.SetPlayerPosition(GameManager.instance.player.transform.position);
 
-
             // Convert the save data instance to JSON format
             string jsonString = JsonUtility.ToJson(saveData, true);
 
+            // Make a save path to save the file to
+            string savePath = Application.persistentDataPath + "/saveFile.jsonFile";
+
             // Create an instance of StreamWriter to write the JSON to disk
-            // "using" keyword automatically disposes of the StreamWriter, so we don't have to manually call Dispose() on it
+            // C#-specific: "using" keyword automatically disposes of the StreamWriter, so we don't have to manually call Dispose() on it (applies to specific classes)
             using StreamWriter writer = new StreamWriter(savePath);
             writer.Write(jsonString);
 
@@ -80,22 +79,27 @@ namespace GameSaveGeneral
         // ========= Using the alernative binary format
         public void SaveBinary()
         {
-            string savePath = Application.persistentDataPath + "/saveFile.bin";
-
+            // Create an instance of SaveData and fill it in with values to save
             SaveData saveData = new SaveData();
             saveData.SetPlayerPosition(GameManager.instance.player.transform.position);
 
+            // Make a save path to save the file to
+            string savePath = Application.persistentDataPath + "/saveFile.bin";
+
+            // FileStream creates a file (FileMode.Create) to take in the data the BinaryWriter produces, and save it to the hard disk
+            // C#-specific: "using" keyword automatically disposes of the FileStream, so we don't have to manually call Dispose() on it (applies to specific classes)
             using FileStream stream = new FileStream(savePath, FileMode.Create);
 
-            // Note that the type here is BinaryWriter and not BinaryFormatter like above
+            // BinaryWriter is what converts our data to binary values
             using BinaryWriter writer = new BinaryWriter(stream, Encoding.UTF8, false);  // false is to close the file after it's done
 
+            // Convert the SaveData class to a big string in the form of a JSON
             string jsonString = JsonUtility.ToJson(saveData);
 
-            // Encode the JSON file (a big string) into a byte array
+            // Encryption: Encode the JSON string into a byte array
             byte[] bytes = Encoding.UTF8.GetBytes(jsonString);
 
-            // Convert/Encrypt the bytes into a Base64 string
+            // Encryption: Convert/Encrypt the bytes into a Base64 string
             string encryption = Convert.ToBase64String(bytes);
 
             // Write the Encoded string to disk
@@ -106,6 +110,7 @@ namespace GameSaveGeneral
 
         public void LoadBinary()
         {
+            // Make sure the file name and extension matches the saved version above
             string savePath = Application.persistentDataPath + "/saveFile.bin";
 
             if (!File.Exists(savePath))
@@ -115,6 +120,7 @@ namespace GameSaveGeneral
                 return;
             }
 
+            // When loading data, the FileMode is Open to open an already-existing file
             using FileStream stream = new FileStream(savePath, FileMode.Open);
 
             // Note that the type here is BinaryReader
@@ -127,7 +133,7 @@ namespace GameSaveGeneral
             byte[] bytes = Convert.FromBase64String(decryption);
 
             // Decode it into a string that will be our JSON file
-            // (note that we also use UTF8 format like we did in saving above)
+            // (note that its UTF8 format to match the saving above)
             string jsonString = Encoding.UTF8.GetString(bytes);
 
             // Create an instance of SaveData and fill it in with the values stored in the JSON file

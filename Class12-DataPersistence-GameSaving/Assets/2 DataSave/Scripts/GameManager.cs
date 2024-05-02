@@ -24,11 +24,11 @@ namespace GameSaveGeneral
         {
             if (GameSaveManager.instance.isDataLoaded)
             {
-                SetPlayerPosition();
+                RestorePlayerPosition();
             }
         }
 
-        void SetPlayerPosition()
+        void RestorePlayerPosition()
         {
             player.transform.position = GameSaveManager.instance.playerPosition;
         }
@@ -48,7 +48,7 @@ namespace GameSaveGeneral
 
             if (GameSaveManager.instance.isDataLoaded)
             {
-                SetPlayerPosition();
+                RestorePlayerPosition();
             }
         }
 
@@ -63,7 +63,7 @@ namespace GameSaveGeneral
 
             if (GameSaveManager.instance.isDataLoaded)
             {
-                SetPlayerPosition();
+                RestorePlayerPosition();
             }
         }
     }
