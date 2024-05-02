@@ -22,29 +22,29 @@ namespace GameSaveWeb
 
         public override void Initialise()
         {
-            if (GameSaveManager.instance.isDataLoaded)
+            if (GameSaveManagerWeb.instance.isDataLoaded)
             {
-                SetPlayerPosition();
+                RestorePlayerPosition();
             }
         }
 
-        void SetPlayerPosition()
+        void RestorePlayerPosition()
         {
-            player.transform.position = GameSaveManager.instance.playerPosition;
+            player.transform.position = GameSaveManagerWeb.instance.playerPosition;
         }
 
         public void OnSaveButtonClicked()
         {
-            GameSaveManager.instance.SaveGame();
+            GameSaveManagerWeb.instance.SaveGame();
         }
 
         // Button click action
         public void OnLoadButtonClicked()
         {
-            GameSaveManager.instance.LoadGameData();
-            if (GameSaveManager.instance.isDataLoaded)
+            GameSaveManagerWeb.instance.LoadGameData();
+            if (GameSaveManagerWeb.instance.isDataLoaded)
             {
-                SetPlayerPosition();
+                RestorePlayerPosition();
             }
         }
     }
