@@ -13,7 +13,7 @@ namespace GameConfiguration
         public SoundManager soundManager;
         public ConfigSaveManager saveManager;
 
-        void Start()
+        void Awake()
         {
             LoadGameSettings();
         }

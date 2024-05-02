@@ -6,7 +6,7 @@ namespace GameConfiguration
 {
     public class ConfigSaveManager : MonoBehaviour
     {
-        // Save Integers
+        //--------- Save Integers
         public void SetPrefInt(string name, int value)
         {
             PlayerPrefs.SetInt(name, value);
@@ -29,7 +29,7 @@ namespace GameConfiguration
         }
 
 
-        // Save Floats
+        //--------- Save Floats
         public void SetPrefFloat(string name, float value)
         {
             PlayerPrefs.SetFloat(name, value);
@@ -52,7 +52,7 @@ namespace GameConfiguration
         }
 
 
-        // Save Strings
+        //--------- Save Strings
         public void SetPrefString(string name, string value)
         {
             PlayerPrefs.SetString(name, value);
@@ -72,7 +72,7 @@ namespace GameConfiguration
         }
 
 
-        // Save Booleans
+        //--------- Save Booleans
         public void SetPrefBool(string name, bool value)
         {
             // Can be this way

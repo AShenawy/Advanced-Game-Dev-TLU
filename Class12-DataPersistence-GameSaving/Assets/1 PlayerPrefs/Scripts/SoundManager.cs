@@ -10,7 +10,7 @@ namespace GameConfiguration
 
         public ConfigSaveManager saveManager;
 
-        void Start()
+        void Awake()
         {
             LoadGameSettings();
         }
@@ -21,11 +21,11 @@ namespace GameConfiguration
             if (volumeLevel > -1)
             {
                 print("Found volume setting: " + volumeLevel);
-                soundSource.volume = volumeLevel;
+                SetVolume(volumeLevel);
             }
             else
             {
-                soundSource.volume = 1;
+                SetVolume(1);
             }
 
 
@@ -34,7 +34,7 @@ namespace GameConfiguration
             {
                 print("Found mute setting: true");
             }
-            AudioListener.volume = muteValue ? 0f : 1f;
+            SetMuted(muteValue);
         }
 
         public void SetVolume(float level)
