@@ -6,9 +6,9 @@ using GameSaveGeneral;
 
 namespace GameSaveWeb
 {
-    public class GameSaveManager : ManagerBase
+    public class GameSaveManagerWeb : ManagerBase
     {
-        public static GameSaveManager instance;
+        public static GameSaveManagerWeb instance;
 
         public bool isDataLoaded;
         public Vector3 playerPosition;
@@ -36,16 +36,14 @@ namespace GameSaveWeb
         public void SaveGame()
         {
             // ==== Save code just like other GameSaveManager ====
-            BinaryFormatter formatter = new BinaryFormatter();
-            string savePath = Application.persistentDataPath + "/saveFile.whatever";
-            FileStream stream = new FileStream(savePath, FileMode.Create);
+            SaveData saveData = new SaveData();
+            saveData.SetPlayerPosition(GameManager.instance.player.transform.position);
 
-            SaveData data = new SaveData();
-            Vector3 playerPosition = GameManager.instance.player.transform.position;
-            data.SetPlayerPosition(playerPosition);
-            
-            formatter.Serialize(stream, data);
-            stream.Close();
+            string jsonString = JsonUtility.ToJson(saveData, true);
+
+            string savePath = Application.persistentDataPath + "/saveFile.jsonFile";
+            using StreamWriter writer = new StreamWriter(savePath);
+            writer.Write(jsonString);
 
             // ==== Afterwards, we add the WebGL related part ====
 
@@ -59,17 +57,16 @@ namespace GameSaveWeb
         public void LoadGameData()
         {
             // ==== Load code just like other GameSaveManager ====
+            string savePath = Application.persistentDataPath + "/saveFile.jsonFile";
 
-            string savePath = Application.persistentDataPath + "/saveFile.whatever";
             if (File.Exists(savePath))
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                FileStream stream = new FileStream(savePath, FileMode.Open);
+                using StreamReader reader = new StreamReader(savePath);
+                string jsonString = reader.ReadToEnd(); // ReadToEnd ensures we get all the information stored on the file
 
-                SaveData data = (SaveData)formatter.Deserialize(stream);
+                SaveData saveData = JsonUtility.FromJson<SaveData>(jsonString);
+                playerPosition = saveData.GetPlayerPosition();
 
-                playerPosition = data.GetPlayerPosition();
-                stream.Close();
                 isDataLoaded = true;
                 print("Save Manager: Data loading complete");
             }
