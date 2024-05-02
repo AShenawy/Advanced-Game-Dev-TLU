@@ -34,19 +34,32 @@ namespace GameSaveGeneral
         }
 
         // Button click action
-        public void OnSaveButtonClicked()
+        public void SaveBinary()
         {
-            GameSaveManager.instance.SaveGameData();
-            //GameSaveManager.instance.SaveJSON();
-            //GameSaveManager.instance.SaveBinary();
+            GameSaveManager.instance.SaveBinary();
+            //GameSaveManager.instance.SaveGameDataBadWay();
         }
 
         // Button click action
-        public void OnLoadButtonClicked()
+        public void LoadBinary()
         {
-            GameSaveManager.instance.LoadGameData();
-            //GameSaveManager.instance.LoadJSON();
-            //GameSaveManager.instance.LoadBinary();
+            GameSaveManager.instance.LoadBinary();
+            //GameSaveManager.instance.LoadGameDataBadWay();
+
+            if (GameSaveManager.instance.isDataLoaded)
+            {
+                SetPlayerPosition();
+            }
+        }
+
+        public void SaveJson()
+        {
+            GameSaveManager.instance.SaveJSON();
+        }
+
+        public void LoadJson()
+        {
+            GameSaveManager.instance.LoadJSON();
 
             if (GameSaveManager.instance.isDataLoaded)
             {

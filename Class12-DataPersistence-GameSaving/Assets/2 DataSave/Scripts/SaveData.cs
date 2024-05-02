@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace GameSaveGeneral
 {
@@ -8,7 +9,7 @@ namespace GameSaveGeneral
     {
         // All values/variables to be stored on disk should be either public or
         // have [SerializeField] attribute if they're private
-        public float[] position = new float[3];
+        public List<float> position = new List<float>() { 0, 0, 0 };
 
         // Methods are not saved to disk
         public void SetPlayerPosition(Vector3 newPosition)

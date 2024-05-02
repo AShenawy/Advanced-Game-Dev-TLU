@@ -9,7 +9,7 @@ namespace GameSaveGeneral
         // The ManagerController can help us control the order of which manager classes are each setting themselves up
         // Since we cannot guarantee any order from Awake() or Start()
 
-        public ManagerBase[] managers;
+        public List<ManagerBase> managers;
 
 
         void Start()
@@ -19,9 +19,9 @@ namespace GameSaveGeneral
 
         void InitialiseManagers()
         {
-            foreach (ManagerBase man in managers)
+            foreach (ManagerBase manager in managers)
             {
-                man.Initialise();
+                manager.Initialise();
             }
         }
     }
