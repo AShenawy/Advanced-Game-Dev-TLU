@@ -76,23 +76,24 @@ namespace GameSaveGeneral
         }
 
 
-        // ========= Using the alernative binary format
+        // ========= Using the correct binary format
         public void SaveBinary()
         {
-            // Create an instance of SaveData and fill it in with values to save
+            // 1- Create an instance of SaveData and fill it in with values to save
             SaveData saveData = new SaveData();
             saveData.SetPlayerPosition(GameManager.instance.player.transform.position);
 
-            // Make a save path to save the file to
-            string savePath = Application.persistentDataPath + "/saveFile.bin";
+            // 2- Make a save path to save the file to
+            string savePath = Application.persistentDataPath + "/saveFile.whatever";
 
-            // FileStream creates a file (FileMode.Create) to take in the data the BinaryWriter produces, and save it to the hard disk
+            // 3- FileStream creates a file (FileMode.Create) to take in the data the BinaryWriter produces, and save it to the hard disk
             // C#-specific: "using" keyword automatically disposes of the FileStream, so we don't have to manually call Dispose() on it (applies to specific classes)
             using FileStream stream = new FileStream(savePath, FileMode.Create);
 
-            // BinaryWriter is what converts our data to binary values
+            // 4- BinaryWriter is what converts our data to binary values
             using BinaryWriter writer = new BinaryWriter(stream, Encoding.UTF8, false);  // false is to close the file after it's done
 
+            #region Encryption
             // Convert the SaveData class to a big string in the form of a JSON
             string jsonString = JsonUtility.ToJson(saveData);
 
@@ -100,7 +101,8 @@ namespace GameSaveGeneral
             byte[] bytes = Encoding.UTF8.GetBytes(jsonString);
 
             // Encryption: Convert/Encrypt the bytes into a Base64 string
-            string encryption = Convert.ToBase64String(bytes);
+            string encryption = Convert.ToBase64String(bytes); 
+            #endregion
 
             // Write the Encoded string to disk
             writer.Write(encryption);
@@ -111,7 +113,7 @@ namespace GameSaveGeneral
         public void LoadBinary()
         {
             // Make sure the file name and extension matches the saved version above
-            string savePath = Application.persistentDataPath + "/saveFile.bin";
+            string savePath = Application.persistentDataPath + "/saveFile.whatever";
 
             if (!File.Exists(savePath))
             {

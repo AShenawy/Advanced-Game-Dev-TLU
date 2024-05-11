@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace GameSaveGeneral
 {
     // Save data class must be Serializable
-    [System.Serializable]
+    [Serializable]
     public class SaveData
     {
+        public Player player;
+
         // All values/variables to be stored on disk should be either public or
         // have [SerializeField] attribute if they're private
         public List<float> position = new List<float>() { 0, 0, 0 };
