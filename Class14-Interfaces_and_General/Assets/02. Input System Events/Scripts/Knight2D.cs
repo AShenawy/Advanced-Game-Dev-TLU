@@ -15,9 +15,4 @@ public class Knight2D : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         
         print("Pointer entered Knight!");
     }
-
-    private void OnMouseDown()
-    {
-        
-    }
 }
