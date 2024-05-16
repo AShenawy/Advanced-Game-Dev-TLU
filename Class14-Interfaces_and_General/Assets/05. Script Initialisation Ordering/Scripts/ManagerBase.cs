@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ManagerBase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void InitialiseManager()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

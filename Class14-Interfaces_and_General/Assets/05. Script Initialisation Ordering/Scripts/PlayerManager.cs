@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : ManagerBase
 {
     public static PlayerManager instance;
 
@@ -11,10 +11,10 @@ public class PlayerManager : MonoBehaviour
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void InitialiseManager()
     {
-        
+        base.InitialiseManager();
+        print(name);
     }
 
     // Update is called once per frame

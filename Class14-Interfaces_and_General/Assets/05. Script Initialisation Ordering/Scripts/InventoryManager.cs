@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : ManagerBase
 {
     public static InventoryManager instance;
 
@@ -21,5 +21,12 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public override void InitialiseManager()
+    {
+        base.InitialiseManager();
+        print(name);
     }
 }

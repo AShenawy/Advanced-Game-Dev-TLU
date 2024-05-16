@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public List<ManagerBase> managers;
+
+
     private void Awake()
     {
         instance = this;
@@ -14,7 +17,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (ManagerBase manager in managers)
+        {
+            Instantiate(manager);
+            manager.InitialiseManager();
+        }
+
     }
 
     // Update is called once per frame

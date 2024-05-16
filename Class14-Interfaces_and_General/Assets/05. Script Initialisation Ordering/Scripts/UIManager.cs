@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : ManagerBase
 {
     public static UIManager instance;
 
@@ -22,5 +22,12 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void InitialiseManager()
+    {
+        base.InitialiseManager();
+        print(name);
+
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : ManagerBase
 {
     public static SoundManager instance;
 
@@ -21,5 +21,11 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void InitialiseManager()
+    {
+        base.InitialiseManager();
+        print(name);
     }
 }
