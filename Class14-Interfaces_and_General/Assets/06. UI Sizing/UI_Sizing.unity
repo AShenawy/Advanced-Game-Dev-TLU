@@ -278,7 +278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TITLE
+  m_Text: MENU 1
 --- !u!222 &206945075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TITLE
+  m_Text: MENU 2
 --- !u!222 &654817414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 962028294}
   - component: {fileID: 962028293}
   m_Layer: 5
-  m_Name: OPtions (1)
+  m_Name: Menu 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,6 +938,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1504,7 +1505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TITLE
+  m_Text: MENU 3
 --- !u!222 &1422278101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1685,7 +1686,7 @@ GameObject:
   - component: {fileID: 1637506616}
   - component: {fileID: 1637506615}
   m_Layer: 5
-  m_Name: OPtions (2)
+  m_Name: Menu 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,7 +1766,7 @@ GameObject:
   - component: {fileID: 1751960609}
   - component: {fileID: 1751960608}
   m_Layer: 5
-  m_Name: OPtions
+  m_Name: Menu 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
