@@ -5,22 +5,17 @@ using UnityEngine.UI;
 
 public class ColorSelector : MonoBehaviour
 {
-    public Slider red;
+	public Image colourPreview;
+    
+	public Slider red;
     public Slider green;
     public Slider blue;
 
     public Colorise coloriser;  // Reference to the script on the Square game object
 
-    private Image colourPreview;
     private Color newColor;
 
     
-    void Start()
-    {
-        colourPreview = GetComponent<Image>();
-    }
-
-
     // Update is called once per frame
     void Update()
     {

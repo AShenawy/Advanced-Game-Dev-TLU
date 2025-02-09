@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 743264868}
   - component: {fileID: 743264870}
   - component: {fileID: 743264869}
+  - component: {fileID: 743264871}
   m_Layer: 5
   m_Name: Specific Color
   m_TagString: Untagged
@@ -815,6 +816,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743264867}
   m_CullTransparentMesh: 1
+--- !u!114 &743264871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743264867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c79c0856d2dd2d4b92d0c00b81f92a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourPreview: {fileID: 945280603}
+  red: {fileID: 1005491326}
+  green: {fileID: 800925336}
+  blue: {fileID: 1351292626}
+  coloriser: {fileID: 483382646}
 --- !u!1 &744571097
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +919,7 @@ GameObject:
   - component: {fileID: 800925335}
   - component: {fileID: 800925336}
   m_Layer: 5
-  m_Name: Green
+  m_Name: Slider Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,9 +1146,8 @@ GameObject:
   - component: {fileID: 945280602}
   - component: {fileID: 945280604}
   - component: {fileID: 945280603}
-  - component: {fileID: 945280605}
   m_Layer: 5
-  m_Name: Colour
+  m_Name: Colour Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1193,22 +1210,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945280601}
   m_CullTransparentMesh: 1
---- !u!114 &945280605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945280601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c79c0856d2dd2d4b92d0c00b81f92a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  red: {fileID: 1005491326}
-  green: {fileID: 800925336}
-  blue: {fileID: 1351292626}
-  coloriser: {fileID: 483382646}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1304,7 @@ GameObject:
   - component: {fileID: 1005491325}
   - component: {fileID: 1005491326}
   m_Layer: 5
-  m_Name: Red
+  m_Name: Slider Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,7 +1396,7 @@ GameObject:
   - component: {fileID: 1114051450}
   - component: {fileID: 1114051449}
   m_Layer: 5
-  m_Name: Change
+  m_Name: Btn - Apply Colour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 945280605}
+      - m_Target: {fileID: 743264871}
         m_TargetAssemblyTypeName: ColorSelector, Assembly-CSharp
         m_MethodName: ApplyColour
         m_Mode: 1
@@ -1601,7 +1602,7 @@ GameObject:
   - component: {fileID: 1351292625}
   - component: {fileID: 1351292626}
   m_Layer: 5
-  m_Name: Blue
+  m_Name: Slider Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
