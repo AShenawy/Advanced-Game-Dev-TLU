@@ -9,4 +9,11 @@ public class Circle : Shape
     // If we don't override the method, then only the paren't part will execute
     // as, obviously, the child has no extra implementation of that method
     // i.e. the Circle now has no area calculated
+
+    public override void GetArea()
+    {
+        area = Mathf.PI * radius * radius;
+
+        base.GetArea();
+    }
 }
