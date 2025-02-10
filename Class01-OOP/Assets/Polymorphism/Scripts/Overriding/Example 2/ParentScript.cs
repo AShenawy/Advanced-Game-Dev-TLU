@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ParentScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Unity allows us to also make the Awake, Start, Update, etc. functions
+	// virtual to be overridden by their child classes
+    public virtual void Start()
     {
         print("Hello! I'm the " + name);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

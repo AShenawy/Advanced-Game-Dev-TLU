@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ChildScript : ParentScript
 {
-    // Start is called before the first frame update
-    void Start()
+    // Overriding Start is just like overriding our own custom functions
+    public override void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Start();
     }
 }
