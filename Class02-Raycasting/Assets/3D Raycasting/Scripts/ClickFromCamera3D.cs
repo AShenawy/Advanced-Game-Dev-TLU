@@ -37,11 +37,11 @@ public class ClickFromCamera3D : MonoBehaviour
             print(hit.transform.name);
 
             // Do other logic with the object we clicked on
-            RandomiseColor random = hit.transform.GetComponent<RandomiseColor>();
+            RandomiseColor randomColorScript = hit.transform.GetComponent<RandomiseColor>();
 
-            if (random != null)
+            if (randomColorScript != null)
             {
-                random.Randomise();
+                randomColorScript.Randomise();
             }
         }
         else
@@ -49,7 +49,12 @@ public class ClickFromCamera3D : MonoBehaviour
             print("Nothing clicked!");
         }
 
+        DrawDebugClickRay(clickPosition, clickRay);
+    }
 
+    // Draws a ray in the editor to visualise the click direction
+    void DrawDebugClickRay(Vector2 clickPosition, Ray clickRay)
+    {
         // Project the click screen position to in-game world position
         Vector3 clickOrigin = mainCamera.ScreenToWorldPoint(new Vector3(clickPosition.x, clickPosition.y, 0f));
 
