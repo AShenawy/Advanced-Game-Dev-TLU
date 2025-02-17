@@ -27,9 +27,10 @@ public class ClickFromCamera2D : MonoBehaviour
         // Declare a variable to store the Raycast hit information
         RaycastHit2D hit2d;
 
-        // Physics2D.Raycast returns the result from casting the ray - which can be empty (null)
+        // Physics2D.Raycast returns the result from casting the ray
         hit2d = Physics2D.Raycast(worldClickPosition, Vector2.zero);
 
+        // hit2d will resolve to `true` if a hit occurs, otherwise `false`
         if (hit2d)
         {
             print("Clicked on " + hit2d.transform.name);
