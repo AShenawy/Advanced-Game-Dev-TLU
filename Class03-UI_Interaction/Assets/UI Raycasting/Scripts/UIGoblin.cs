@@ -14,8 +14,8 @@ public class UIGoblin : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         image.alphaHitTestMinimumThreshold = 0.05f;
     }
 
-
-    /* ## To be used with the Event Trigger component in Unity
+    /*
+    // ## To be used with the Event Trigger component in Unity
     public void TriggerClick(BaseEventData eventData)
     {
         print("Used trigger click");
@@ -25,7 +25,16 @@ public class UIGoblin : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         if (eventData is PointerEventData pointerEvent)
         {
-            print("starting to drag with trigger" + pointerEvent.pointerDrag);
+            print("Starting to drag with trigger" + pointerEvent.pointerDrag);
+        }
+    }
+
+    public void TriggerDrag(BaseEventData eventData)
+    {
+        if (eventData is PointerEventData pointerEvent)
+        {
+            print("Dragging with trigger" + pointerEvent.pointerDrag);
+            transform.position += (Vector3)pointerEvent.delta;
         }
     }
     */
