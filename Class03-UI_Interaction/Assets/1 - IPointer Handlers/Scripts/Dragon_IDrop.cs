@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;  // This namespace is required to use the below interfaces
 
-public class UIDragon : MonoBehaviour, IDropHandler
+public class Dragon_IDrop : MonoBehaviour, IDropHandler
 {
     private void Awake()
     {
@@ -25,6 +25,6 @@ public class UIDragon : MonoBehaviour, IDropHandler
         // Store a reference to the object being dropped
         var droppedObject = eventData.pointerDrag;
 
-        print(droppedObject.name + " is dropped on me");
+        print($"{droppedObject.name} is dropped on {name}");
     }
 }

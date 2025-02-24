@@ -1,43 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; // This namespace is required to use the below interfaces
 using UnityEngine.UI;
+using UnityEngine.EventSystems; // This namespace is required to use the below interfaces
 
-public class UIGoblin : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerClickHandler
+public class Goblin_IPointer : MonoBehaviour, IPointerClickHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     private void Awake()
     {
         // Prevent the transparent parts of the UI Image from triggering pointer events
         // ## Important: For this to work, make sure Read/Write is enabled in the sprite's import settings in Unity
         Image image = GetComponent<Image>();
-        image.alphaHitTestMinimumThreshold = 0.05f;
+        image.alphaHitTestMinimumThreshold = 0.5f;
     }
-
-    /*
-    // ## To be used with the Event Trigger component in Unity
-    public void TriggerClick(BaseEventData eventData)
-    {
-        print("Used trigger click");
-    }
-
-    public void TriggerBeginDrag(BaseEventData eventData)
-    {
-        if (eventData is PointerEventData pointerEvent)
-        {
-            print("Starting to drag with trigger" + pointerEvent.pointerDrag);
-        }
-    }
-
-    public void TriggerDrag(BaseEventData eventData)
-    {
-        if (eventData is PointerEventData pointerEvent)
-        {
-            print("Dragging with trigger" + pointerEvent.pointerDrag);
-            transform.position += (Vector3)pointerEvent.delta;
-        }
-    }
-    */
 
     // OnPointerClick is called only when we do a full click (button down and up) on the same object
     // Docs ref: https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.IPointerClickHandler.html
@@ -45,7 +20,6 @@ public class UIGoblin : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         print("clicked on " + name);
     }
-
 
     // OnBeginDrag is called only once when we hold and start dragging the game object
     // If we don't drag, it won't get called
@@ -82,4 +56,5 @@ public class UIGoblin : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         // Enable the raycast target property to be able to detect drags and clicks on this object again
         GetComponent<Image>().raycastTarget = true;
     }
+
 }
