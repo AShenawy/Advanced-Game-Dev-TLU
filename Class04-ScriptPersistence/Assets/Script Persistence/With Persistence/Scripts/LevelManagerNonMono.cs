@@ -15,6 +15,8 @@ namespace Persisting
 
         public static void LoadLevel(string levelName)
         {
+            Debug.Log("Loading new level: " + levelName);
+
             // store current scene name as previous level before loading the new scene
             previousLevel = SceneManager.GetActiveScene().name;
 
