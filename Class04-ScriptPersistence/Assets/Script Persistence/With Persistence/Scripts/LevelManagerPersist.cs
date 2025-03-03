@@ -13,7 +13,7 @@ namespace Persisting
         public string previousLevel;
         public string currentLevel;
 
-        public void Awake()
+        private void Awake()
         {
             if (instance == null)
             {
@@ -24,7 +24,8 @@ namespace Persisting
             }
             else if (instance != this)
             {
-                // If there's another game object in the scene with this script on it, remove it from the scene
+				// If there's another game object in the scene with this script on it, remove it from the scene
+                print("Instance exists. Removing duplicate Level Manager");
                 Destroy(gameObject);
             }
         }
