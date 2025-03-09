@@ -24,7 +24,7 @@ public class FadeOut : MonoBehaviour
             //// Normal function call
             //FadeAlphaNormal();
 
-            //// Direct corouting call (cannot be selectively stopped)
+            //// Direct coroutine call (cannot be selectively stopped)
             //StartCoroutine(FadeAlphaCoroutine());
 
             //// Calling coroutine by its string name
@@ -44,7 +44,7 @@ public class FadeOut : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             // Null check so we don't get a "null reference" error when calling StopCoroutine
             if (runningCoroutine != null)
@@ -81,10 +81,10 @@ public class FadeOut : MonoBehaviour
             // Get a new alpha/transparency that's 10% less than before
             float newAlpha = material.color.a - 0.1f;
 
-            Color matColor = material.color;
+            Color color = material.color;
 
             // Apply new alpha (R,G, and B colors remain the same as original material)
-            material.color = new Color(matColor.r, matColor.g, matColor.b, newAlpha);
+            material.color = new Color(color.r, color.g, color.b, newAlpha);
         }
     }
 
@@ -99,10 +99,10 @@ public class FadeOut : MonoBehaviour
             // Get a new alpha/transparency that's 10% less than before
             float newAlpha = material.color.a - 0.1f;
 
-            Color matColor = material.color;
+            Color color = material.color;
 
             // Apply new alpha (R,G, and B colors remain the same as original material)
-            material.color = new Color(matColor.r, matColor.g, matColor.b, newAlpha);
+            material.color = new Color(color.r, color.g, color.b, newAlpha);
 
             // Wait a time interval to pass before repeating the while loop
             yield return new WaitForSeconds(fadeInterval);
