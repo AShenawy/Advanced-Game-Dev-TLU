@@ -9,6 +9,12 @@ public class DelayedHello : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            NormalGreetingFunction();
+        }
+
+
         if (Input.GetKeyDown(KeyCode.D))
         {
             // Can be called directly
