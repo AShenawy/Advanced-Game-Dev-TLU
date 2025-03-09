@@ -28,24 +28,24 @@ public class MultiYield : MonoBehaviour
     // Coroutines can take arguments as well
     IEnumerator PrintMessages(float firstDelay, float secondDelay)
     {
-        print("Starting message printing - " + Time.time.ToString("0.00"));
+        print("Starting message printing - at " + Time.time.ToString("0.00"));
 
         // WaitForSeconds is scaled time
         yield return new WaitForSeconds(firstDelay);
-        print(message1 + " - " + Time.time.ToString("0.00"));
+        print(message1 + " - at " + Time.time.ToString("0.00"));
 
         // Wait for another coroutine to finish before continuing this one
         yield return DoOtherStuff();
-        print("back to printing messages - " + Time.time.ToString("0.00"));
+        print("back to printing messages - at " + Time.time.ToString("0.00"));
 
         // WaitForSecondsRealtime is un-scaled time
         yield return new WaitForSecondsRealtime(secondDelay);
-        print(message2 + " - " + Time.time.ToString("0.00"));
+        print(message2 + " - at " + Time.time.ToString("0.00"));
     }
 
     IEnumerator DoOtherStuff()
     {
-        print("Doing other stuff - " + Time.time.ToString("0.00"));
+        print("Doing other stuff - at " + Time.time.ToString("0.00"));
         yield return new WaitForSeconds(3f);
     }
 }
