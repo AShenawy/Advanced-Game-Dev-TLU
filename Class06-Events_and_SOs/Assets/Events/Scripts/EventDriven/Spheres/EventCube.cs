@@ -7,7 +7,7 @@ public class EventCube : MonoBehaviour
 {
     // Declare events
     public static event UnityAction OnActivate;
-    public static event UnityAction OnDeactivate;
+
 
     void Update()
     {
@@ -33,8 +33,7 @@ public class EventCube : MonoBehaviour
     void Deactivate()
     {
         print("Invoking Deactivate Event!");
-
-        // Invoke the event after checking if it's not null (has subscribers)
-        OnDeactivate?.Invoke();
+        
+        // Invoke a deactivation event...
     }
 }

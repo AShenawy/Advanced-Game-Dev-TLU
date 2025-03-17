@@ -16,7 +16,6 @@ public class EventSphere : MonoBehaviour
 
         // Subscribe to the events with functions to call once an event is raised/invoked
         EventCube.OnActivate += ActivateSphere;
-        EventCube.OnDeactivate += DeactivateSphere;
     }
 
     public void ActivateSphere()
@@ -35,6 +34,5 @@ public class EventSphere : MonoBehaviour
     {
         // Unsubscribe from the events in case thig game object is destroyed in the scene
         EventCube.OnActivate -= ActivateSphere;
-        EventCube.OnDeactivate -= DeactivateSphere;
     }
 }
