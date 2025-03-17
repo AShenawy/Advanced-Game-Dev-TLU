@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int energy = 50;
-    public const string playerTag = "Player";
+    public static string playerTag = "Player";
 
 
     public void TakeItem(PickUp item)
