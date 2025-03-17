@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8639930349882565467, guid: afed36a50cf73f442a83630df7dd813c, type: 3}
       propertyPath: m_Name
-      value: Yoga Ball
+      value: Poseidon's Fork
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afed36a50cf73f442a83630df7dd813c, type: 3}
@@ -392,6 +392,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5685467418739281935, guid: 65b2e6ba5b841db48bde6150b5b14492, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685467418739281935, guid: 65b2e6ba5b841db48bde6150b5b14492, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -453,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186697427507914134, guid: 31522cf320639ea4ab1e3acf4876f675, type: 3}
       propertyPath: m_Name
-      value: Sandwich
+      value: Icecream
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31522cf320639ea4ab1e3acf4876f675, type: 3}
