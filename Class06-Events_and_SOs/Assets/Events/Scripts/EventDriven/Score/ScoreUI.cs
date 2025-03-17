@@ -7,20 +7,31 @@ public class ScoreUI : MonoBehaviour
 {
     public TMP_Text textScore;
 
+    private void Awake()
+    {
+		// Subscribe to the event
+        ScoreManager.OnNewHiscore += SetScore;
+    }
+
+    // Update the high score UI when a new highscore is reached
     private void Start()
     {
         ResetScore();
-
-        ScoreManager.OnHiScoreChanged += UpdateScore;
     }
 
     void ResetScore()
     {
-        textScore.text = "0";
+        textScore.text = "000";
     }
 
-    void UpdateScore(int newScore)
+    void SetScore(int newScore)
     {
         textScore.text = newScore.ToString();
+    }
+
+    private void OnDestroy()
+    {
+		// Unsubscribe from the event
+        ScoreManager.OnNewHiscore -= SetScore;
     }
 }
