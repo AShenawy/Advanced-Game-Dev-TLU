@@ -17,6 +17,7 @@ public class ScoreManager : MonoBehaviour
 
         if (currentScore > hiScore)
         {
+            print("New hi-score reached! " + currentScore);
             hiScore = currentScore;
 
             // Invoke the event and provide an int value, as defined by the event type above: UnityAction<int>
