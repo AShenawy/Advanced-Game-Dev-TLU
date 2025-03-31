@@ -24,7 +24,7 @@ public class ItemDisplay : MonoBehaviour
     }
 
     // Unity Button trigger
-    public void SetItem(ItemData item)
+    public void EquipItem(ItemData item)
     {
         if (stackCount < item.maxAmount)
         {
