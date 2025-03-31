@@ -104,6 +104,12 @@ public class ItemDisplay : MonoBehaviour
     // Unity Button trigger
     public void ModifyName(string newName)
     {
+        if (itemData == null)
+        {
+            Debug.LogWarning("Item Data is empty");
+            return;
+        }
+
         itemData.itemName = newName;
         itemText.text = newName;
     }
