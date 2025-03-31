@@ -45,9 +45,12 @@ public class ItemDisplay : MonoBehaviour
             }
         }
 
+        // UI Update
         itemData = item;
         itemText.text = item.itemName;
         itemImage.sprite = item.itemIcon;
+
+
         usesLeft = item.usageCount;
 
         if (usesText)
@@ -86,6 +89,8 @@ public class ItemDisplay : MonoBehaviour
     public void Clear()
     {
         itemData = null;
+
+        // Reset all UI elements
         itemText.text = "Nothing Equipped";
         itemImage.sprite = unequippedSprite;
         usesLeft = 0;
