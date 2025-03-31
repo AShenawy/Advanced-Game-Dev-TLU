@@ -40,7 +40,7 @@ public class ItemDisplay : MonoBehaviour
         {
             if (messageText)
             {
-                messageText.text = "Can't equip more of " + item.itemName;
+                messageText.text = "Can't equip more of " + item.itemName + "\nHas " + stackCount;
             }
         }
 
@@ -76,7 +76,7 @@ public class ItemDisplay : MonoBehaviour
         {
             if (messageText)
             {
-                messageText.text = "";
+                messageText.text = "Item depleted";
             }
         }
     }
