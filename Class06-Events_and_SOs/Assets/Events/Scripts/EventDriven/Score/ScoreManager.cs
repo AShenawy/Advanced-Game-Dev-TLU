@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
             hiScore = currentScore;
 
             // Invoke the event and provide an int value, as defined by the event type above: UnityAction<int>
-            OnHiScoreChanged?.Invoke(hiScore);
+            OnNewHiscore?.Invoke(hiScore);
         }
         else if (currentScore <= 0)
 		{
