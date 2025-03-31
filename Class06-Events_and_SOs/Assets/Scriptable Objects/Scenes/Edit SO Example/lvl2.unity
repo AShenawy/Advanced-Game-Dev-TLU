@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924e8b89a1047124f8d492dfcf8bfdf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: c27d245eb1b20fd4ab16950e927d52b9, type: 2}
+  itemData: {fileID: 0}
   itemText: {fileID: 1601275324}
   itemImage: {fileID: 1746276268}
   unequippedSprite: {fileID: 0}
@@ -601,7 +601,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 149416497}
         m_TargetAssemblyTypeName: ItemDisplay, Assembly-CSharp
-        m_MethodName: SetItem
+        m_MethodName: EquipItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: c27d245eb1b20fd4ab16950e927d52b9, type: 2}

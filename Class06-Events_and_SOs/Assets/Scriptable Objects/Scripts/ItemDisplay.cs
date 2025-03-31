@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemDisplay : MonoBehaviour
 {
+    // The current item - direct reference to the Scriptable Object!!
     public ItemData itemData;
 
     [SerializeField] private Text itemText;
