@@ -71,12 +71,14 @@ public class DlgManSimple : MonoBehaviour
         {
             // Incoming lines list is empty. No dialogue to display
             // Exit the function
+            Debug.LogWarning("No dialogue lines given");
             return;
         }
         else if (dialogueLines != null)
         {
             // Another dialogue is in progress
             // Exit the function
+            Debug.LogWarning("A dialogue is already in progress");
             return;
         }
 
