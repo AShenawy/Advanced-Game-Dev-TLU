@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GamePaused State
   m_EditorClassIdentifier: 
   state: 2
-  nextState: {fileID: 11400000, guid: 561bd158a3c3c174eb1ca7f992ac420b, type: 2}
+  nextState: {fileID: 0}
   unpauseState: {fileID: 11400000, guid: 682496ec2fd067f4fbbdea937ac14a6c, type: 2}
   quitState: {fileID: 11400000, guid: 561bd158a3c3c174eb1ca7f992ac420b, type: 2}
