@@ -28,7 +28,7 @@ namespace GameSaveGeneral
         // From ManagerController we know that this Initialise is called before other managers
         public override void Initialise()
         {
-            LoadBinary();
+            LoadJSON();
         }
 
         // ========= Using the JSON format
