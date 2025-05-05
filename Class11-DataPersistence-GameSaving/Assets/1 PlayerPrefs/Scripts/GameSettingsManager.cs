@@ -38,12 +38,14 @@ namespace GameConfiguration
             muteToggle.isOn = muteValue;
         }
 
+        // Called from Unity side
         public void UpdateVolumeState(float level)
         {
             soundManager.SetVolume(level);
             saveManager.SetPrefFloat("volume", level);
         }
 
+        // Called from Unity side
         public void UpdateMutedState(bool isMuted)
         {
             soundManager.SetMuted(isMuted);

@@ -24,6 +24,7 @@ namespace GameSaveGeneral
         {
             if (GameSaveManager.instance.isDataLoaded)
             {
+                print("Found save data. Restoring player position");
                 RestorePlayerPosition();
             }
         }
